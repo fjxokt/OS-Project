@@ -97,11 +97,19 @@ kinit()
    */
   char            arg[4][20];
 
-  if (create_proc("init", MAX_PRI, (char **) arg) < 0)
+  if (create_proc("init", BAS_PRI, (char **) arg) < 0)
   {
     kprintln("FAILNOOB");
     while (1);
   }
+
+	char            arg2[4][20];
+  if (create_proc("inf", MAX_PRI, (char **) arg2) < 0)
+  {
+    kprintln("FAILNOOB");
+    while (1);
+  }
+
 
   /*
    * set the exeption timer

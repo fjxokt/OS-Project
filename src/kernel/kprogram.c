@@ -7,11 +7,13 @@
 #include "kprogram.h"
 #include "kernel.h"
 
+#include "../user/inf.h"
+
 /*
  * Define
  */
 
-#define NUM_PROG 1
+#define NUM_PROG 2
 
 /*
  * Global variable
@@ -24,7 +26,11 @@ static prgm     prgm_ls[NUM_PROG] = {
   {
    "init",
    (uint32_t) & init,
-   "Initialize the system."}
+   "Initialize the system."},
+	{
+   "inf",
+   (uint32_t) & inf,
+   "Print from 1 to infinity."}
 };
 
 /**
